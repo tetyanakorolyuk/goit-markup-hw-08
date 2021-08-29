@@ -1,0 +1,75 @@
+/* Main */
+.hero {
+  background-color: $background-second-color;
+  text-align: center;
+  max-width: 1600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: linear-gradient($hero-bg-image-color, $hero-bg-image-color),
+    url("../images/mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and(min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx){
+    background-image: linear-gradient($hero-bg-image-color, $hero-bg-image-color),
+    url("../images/mobile2x.jpg");
+  }
+  
+  @media screen and(min-width: 481px) {
+    background-image: linear-gradient($hero-bg-image-color, $hero-bg-image-color),
+    url("../images/tablet.jpg");
+  
+   @media screen and(min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient($hero-bg-image-color, $hero-bg-image-color),
+    url("../images/tablet2x.jpg");
+  }
+}
+@media screen and(min-width: 769px) {
+    background-image: linear-gradient($hero-bg-image-color, $hero-bg-image-color),
+    url("../images/heroimg.jpg");
+  
+   @media screen and(min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient($hero-bg-image-color, $hero-bg-image-color),
+    url("../images/heroimg2x.jpg");
+  }
+}
+}
+.hero {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: $primary-white-color;
+    letter-spacing: $letter-spacing-fourth;
+    font-weight: $text-weight-fourth;
+    font-size: $text-size-eighth;
+    line-height: $line-height-fifth;
+    text-transform: uppercase;
+  }
+  &__button {
+    background-color: $accent-color;
+    color: $primary-white-color;
+    letter-spacing: $letter-spacing-fourth;
+    font-family: inherit;
+    font-weight: $text-weight-third;
+    font-size: $text-size-third;
+    line-height: $line-height-ninth;
+    cursor: pointer;
+    border-radius: $border-radius-second;
+    padding: 10px 32px;
+    min-width: 200px;
+    text-align: center;
+    border: none;
+    -webkit-box-shadow: 0 4px 4px $hero-modal-btn-box-shadow-color;
+    box-shadow: 0 4px 4px $hero-modal-btn-box-shadow-color;
+  }
+}

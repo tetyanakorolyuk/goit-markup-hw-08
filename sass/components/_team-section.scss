@@ -1,0 +1,90 @@
+/* Our team */
+.team-section {
+  background-color: $background-third-color;
+  // padding-bottom: 94px;
+  // padding-top: 94px;
+}
+.team-section {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: $primary-text-color;
+    font-weight: $text-weight-third;
+    font-size: $text-size-seventh;
+    line-height: $line-height-second;
+    text-align: center;
+  }
+}
+.team-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  // display: flex;
+
+  &__item {
+    margin-right: 30px;
+    width: 270px;
+    background-color: $primary-white-color;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px $team-first-color, 0px 1px 1px $team-second-color,
+      0px 2px 1px $team-third-color;
+  }
+  &__item:nth-child(4n) {
+    margin-right: 0;
+  }
+  .team-card {
+    padding: 30px 0;
+  }
+}
+.team-card {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: $primary-text-color;
+    font-weight: $text-weight-second;
+  }
+  &__position {
+    margin: 0;
+    margin-bottom: 16px;
+    color: $title-text-color;
+    font-weight: $text-weight-first;
+  }
+  &__title,
+  &__position {
+    font-size: $text-size-third;
+    line-height: $line-height-third;
+    text-align: center;
+  }
+}
+.social-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__link {
+    width: 44px;
+    height: 44px;
+    background-color: $primary-white-color;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    transition: background-color 250ms $cubic-bezier-color;
+  }
+  &__link:last-child {
+    margin-right: 0;
+  }
+  &__icon {
+    fill: $icon-color;
+    transition: fill 250ms $cubic-bezier-color;
+  }
+  &__link:hover,
+  &__:focus {
+    background-color: $accent-color;
+  }
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: $primary-white-color;
+  }
+}

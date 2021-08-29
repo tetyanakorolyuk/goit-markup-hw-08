@@ -1,0 +1,50 @@
+/* Clients */
+// .clients-section {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+// }
+.clients-section {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: $primary-text-color;
+    font-weight: $text-weight-third;
+    font-size: $text-size-seventh;
+    line-height: $line-height-second;
+    text-align: center;
+  }
+}
+// .clients-card {
+//   display: flex;
+//   align-items: center;
+// }
+.clients-card {
+  &__link {
+    width: 170px;
+    height: 92px;
+    background-color: $primary-white-color;
+    border-radius: $border-radius-second;
+    border: 1px;
+    border-color: $icon-color;
+    border-style: solid;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 250ms $cubic-bezier-color;
+  }
+  // &__link:last-child {
+  //   margin-right: 0;
+  // }
+  &__icon {
+    fill: $icon-color;
+    transition: fill 250ms $cubic-bezier-color;
+  }
+  &__link:hover,
+  &__link:focus {
+    border-color: $accent-color;
+  }
+  &__link:hover &__icon {
+    fill: $accent-color;
+  }
+}
