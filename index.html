@@ -21,29 +21,19 @@
 <body>
     <!--Шапка сайта-->
     <header class="page-header">
-        <div class="container page-header__container">
+        <div class="container page-header__container"> 
             <nav class="main-nav">
-                <a href="./index.html" class="logo">Web<span class="main-nav__studio--dark">Studio</span></a>   
-            </nav>
-                <button class="menu-button js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
-                    <svg width="24" height="16" aria-label="Переключатель мобильного меню">
-                    <use class="icon-menu" href="./images/icon.svg#icon-menu"></use>                    
-                    </svg>
-                </button>            
-                     
-            <div class="menu-container js-menu-container" id="mobile-menu">     
-                    <button class="menu-button js-close-menu" type="button">
-                        <svg width="19" height="19" aria-label="Переключатель мобильного меню">                            
-                            <use class="icon-mobile-close" href="./images/icon.svg#icon-mobile-close"></use>
-                        </svg>
-                    </button>
-
+                <a href="./index.html" class="logo">Web<span class="main-nav__studio--dark">Studio</span></a>
                 <ul class="site-nav">
                     <li class="site-nav__item"><a href="./index.html" class="site-nav__link--current">Студия</a></li>
                     <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link ">Портфолио</a></li>
                     <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
-                </ul>              
-            
+                </ul>
+                <button class="menu-toggle js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg width="24" height="16" aria-label="Переключатель мобильного меню"><use class="menu-toggle__icon-menu" href="./images/icon.svg#icon-menu"></use>
+                    </svg>
+                </button>
+            </nav>
             <nav class="auth-nav">
                 <ul class="auth-list">
                     <li class="auth-list__item"><a href="mailto:info@devstudio.com" class="auth-list__link-email"><svg
@@ -57,16 +47,7 @@
                             </svg>+38 096 111 11 11</a>
                     </li>
                 </ul>
-            </nav>
-
-                <ul class="mobile-menu">
-                    <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Instagram</a></li>
-                    <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Twitter</a></li>
-                    <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Facebook<a></a><//li>
-                    <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Linkedln</a></li>
-                </ul>
-            </div>
-           
+            </nav> 
         </div>
     </header>
 
@@ -142,7 +123,7 @@
                 <h2 class="team-section__title">Наша команда</h2>
                 <ul class="team-list">
                     <li class="team-list__item">
-                        <img src="./images/team1.jpg" alt="Игорь Демьяненко" width="270">
+                        <img srcset="./images/team1.jpg 1x, ./images/team1img.jpg 2x" src="./images/team1.jpg" alt="Игорь Демьяненко" width="100%">
                         <div class="team-card">
                             <h3 class="team-card__title">Игорь Демьяненко</h3>
                             <p lang="en" class="team-card__position">Product Designer</p>
@@ -163,7 +144,7 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img src="./images/team2.jpg" alt="Ольга Репина" width="270">
+                        <img srcset="./images/team2.jpg 1x, ./images/team2img.jpg 2x" src="./images/team2.jpg" alt="Ольга Репина" width="100%">
                         <div class="team-card">
                             <h3 class="team-card__title">Ольга Репина</h3>
                             <p lang="en" class="team-card__position">Frontend Developer</p>
@@ -184,7 +165,7 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img src="./images/team3.jpg" alt="Николай Тарасов" width="270">
+                        <img srcset="./images/team3.jpg 1x, ./images/team3img.jpg 2x" src="./images/team3.jpg" alt="Николай Тарасов" width="100%">
                         <div class="team-card">
                             <h3 class="team-card__title">Николай Тарасов</h3>
                             <p lang="en" class="team-card__position">Marketing</p>
@@ -205,7 +186,7 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img src="./images/team4.jpg" alt="Михаил Ермаков" width="270">
+                        <img srcset="./images/team4.jpg 1x, ./images/team4img.jpg 2x" src="./images/team4.jpg" alt="Михаил Ермаков" width="100%">
                         <div class="team-card">
                             <h3 class="team-card__title">Михаил Ермаков</h3>
                             <p lang="en" class="team-card__position">UI Designer</p>
@@ -233,26 +214,22 @@
     <!-- Постоянные клиенты -->
     <section class="clients-section">        
         <div class="container">
-            <h2 class="clients-section__title">Постоянные клиенты</h2>
-            <div class="clients-card">
-            <a href="" class="clients-card__link"><svg class="clients-card__icon" width="106" height="60">
-                        <use href="./images/icon.svg#icon-client1"></use></svg></a>
-                <a href="" class="clients-card__link"><svg class="clients-card__icon" width="106" height="60">
-                        <use href="./images/icon.svg#icon-client2"></use></svg></a>
-                <a href="" class="clients-card__link"><svg class="clients-card__icon" width="106" height="60">
-                        <use href="./images/icon.svg#icon-client3"></use></svg></a>
-                <a href="" class="clients-card__link"><svg class="clients-card__icon" width="106" height="60"><use href="./images/icon.svg#icon-client4"></use></svg> </a>        
-                <a href="" class="clients-card__link"><svg class="clients-card__icon" width="106" height="60">
-                        <use href="./images/icon.svg#icon-client5"></use></svg></a>
-                <a href="" class="clients-card__link"><svg class="clients-card__icon" width="106" height="60">
-                        <use href="./images/icon.svg#icon-client6"></use></svg></a>
-            </div>
+            <h2 class="clients-section__title">Постоянные клиенты</h2>            
+                <ul class="clients-card">
+                    <li class="clients-card__item"><a href="" class="clients-card__link"><svg class="clients-card__icon" width="106" height="60"><use href="./images/icon.svg#icon-client1"></use></svg></a></li>                     
+                    <li class="clients-card__item"><a href="" class="clients-card__link"><svg class="clients-card__icon" width="106" height="60"><use href="./images/icon.svg#icon-client2"></use></svg></a></li>
+                    <li class="clients-card__item"><a href="" class="clients-card__link"><svg class="clients-card__icon" width="106" height="60"><use href="./images/icon.svg#icon-client3"></use></svg></a></li>
+                    <li class="clients-card__item"><a href="" class="clients-card__link"><svg class="clients-card__icon" width="106" height="60"><use href="./images/icon.svg#icon-client4"></use></svg> </a></li>
+                    <li class="clients-card__item"><a href="" class="clients-card__link"><svg class="clients-card__icon" width="106" height="60"><use href="./images/icon.svg#icon-client5"></use></svg></a></li>
+                    <li class="clients-card__item"><a href="" class="clients-card__link"><svg class="clients-card__icon" width="106" height="60"> <use href="./images/icon.svg#icon-client6"></use></svg></a></li>
+                </ul>            
         </div>
     </section>
 
     <!--Футер-->
     <footer class="footer">
         <div class="container footer__container">
+            <div class="footer-part">
             <div class="address-part">
             <a href="./index.html" class="logo">Web<span class="address-part__studio-light">Studio</span></a>
             <address class="address-part__address">
@@ -281,6 +258,7 @@
                     </svg></a>
             </div>
             </div>
+        </div>
         
             <div class="email-part">
             <p class="email-part__name">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
@@ -345,7 +323,34 @@
                 </div>          
             </div>
         </div>
-    <script src="./js/modal.js"></script>
+
+<!-- Mobile menu -->
+<div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle js-close-menu" type="button">
+        <svg width="19" height="19" aria-label="Переключатель мобильного меню"><use class="menu-toggle__icon-mobile-close" href="./images/icon.svg#icon-mobile-close"></use></svg>
+    </button>    
+
+    <ul class="mobile-menu">
+        <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link--current">Студия</a></li>
+        <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__link ">Портфолио</a></li>
+        <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Контакты</a></li>
+    </ul>
+        
+    <ul class="mobile-list">
+        <li class="mobile-list__item"><a href="tel:+380961111111" class="mobile-list__link-phone">+38 096 111 11 11</a></li>
+        <li class="mobile-list__item"><a href="mailto:info@devstudio.com" class="mobile-list__link-email">info@devstudio.com</a></li>        
+    </ul>        
+    
+    <ul class="mobile-social">
+        <li class="mobile-social__item"><a href="#" class="mobile-social__link">Instagram</a></li>
+        <li class="mobile-social__item"><a href="#" class="mobile-social__link">Twitter</a></li>
+        <li class="mobile-social__item"><a href="#" class="mobile-social__link">Facebook<a></a></ /li>
+        <li class="mobile-social__item"><a href="#" class="mobile-social__link">Linkedln</a></li>
+    </ul>
+</div>
+
+
+<script src="./js/modal.js"></script>
 
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
     integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="

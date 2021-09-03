@@ -21,7 +21,7 @@
     url("../images/mobile2x.jpg");
   }
   
-  @media screen and(min-width: 481px) {
+  @media screen and(min-width: 768px) {
     background-image: linear-gradient($hero-bg-image-color, $hero-bg-image-color),
     url("../images/tablet.jpg");
   
@@ -32,7 +32,7 @@
     url("../images/tablet2x.jpg");
   }
 }
-@media screen and(min-width: 769px) {
+@media screen and(min-width: 1200px) {
     background-image: linear-gradient($hero-bg-image-color, $hero-bg-image-color),
     url("../images/heroimg.jpg");
   
@@ -45,6 +45,35 @@
 }
 }
 .hero {
+   @media screen and(max-width: 1199px){
+  &__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: $primary-white-color;
+    letter-spacing: $letter-spacing-fourth;
+    font-weight: $text-weight-fourth;
+    font-size: $text-size-sixth;
+    line-height: $line-height-sixth;
+    text-transform: uppercase;
+  }
+  &__button {
+    background-color: $accent-color;
+    color: $primary-white-color;
+    letter-spacing: $letter-spacing-fourth;
+    font-family: inherit;
+    font-weight: $text-weight-third;
+    font-size: $text-size-third;
+    line-height: $line-height-ninth;
+    cursor: pointer;
+    border-radius: $border-radius-second;
+    padding: 10px 32px;
+    min-width: 200px;
+    text-align: center;
+    border: none;    
+    box-shadow: 0 4px 4px $hero-modal-btn-box-shadow-color;
+  }
+  }
+  @media screen and(min-width: 1199px) {
   &__title {
     margin-top: 0;
     margin-bottom: 30px;
@@ -69,7 +98,7 @@
     min-width: 200px;
     text-align: center;
     border: none;
-    -webkit-box-shadow: 0 4px 4px $hero-modal-btn-box-shadow-color;
     box-shadow: 0 4px 4px $hero-modal-btn-box-shadow-color;
   }
+}
 }

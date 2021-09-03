@@ -20,13 +20,17 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
+  max-width: 450px;
   min-height: 581px;
   transform: translate(-50%, -50%) scale(0.9);
   background-color: $primary-white-color;
   box-shadow: 0px 1px 3px $modal-box-shadow-first-color,
     0px 1px 1px $modal-box-shadow-second-color, 0px 2px 1px $modal-bg-color;
   border-radius: 4px;
+
+  @media screen and(min-width: 1200px) {
+    min-width: 528px;
+  }
   &__close-button {
     position: absolute;
     bottom: 93%;
@@ -49,12 +53,16 @@
     fill: $accent-color;
   }
 }
-// .modal-form {
-//   width: 528px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   padding: 40px;
-// }
+ .modal-form {
+   width: 450px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 40px;
+
+   @media screen and(min-width: 1200px) {
+   width: 528px;
+   }  
+ }
 .modal-form {
   &__title {
     font-weight: $text-weight-third;
@@ -65,11 +73,11 @@
   }
   &__field {
     position: relative;
-    // margin-bottom: 10px;
+    margin-bottom: 10px;
   }
   &__field-comment {
     position: relative;
-    // margin-bottom: 20px;
+    margin-bottom: 20px;
   }
   &__modal-label {
     font-size: $text-size-first;
@@ -81,10 +89,10 @@
     font-size: $text-size-second;
     line-height: $line-height-first;
     letter-spacing: $letter-spacing-first;
-    // width: 100%;
-    // padding-top: 14px;
-    // padding-bottom: 14px;
-    // padding-left: 42px;
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 42px;
     border: 1px solid $modal-form-border-color;
     border-radius: 4px;
     transition: border-color 250ms $cubic-bezier-color;
@@ -114,8 +122,8 @@
     padding: 12px 16px;
     border: 1px solid $modal-form-border-color;
     border-radius: $border-radius-second;
-    // width: 100%;
-    // height: 138px;
+    width: 100%;
+    height: 138px;
     resize: none;
   }
   &__comment:focus {
@@ -126,10 +134,10 @@
     display: block;
     margin: 0 auto;
   }
-  // &__label-policy {
-  //   display: flex;
-  //   justify-content: center;
-  // }
+  &__label-policy {
+  display: flex;
+  justify-content: center;
+   }
   &__icon-check {
     display: inline-block;
     vertical-align: middle;
@@ -151,19 +159,27 @@
     border: $accent-color;
   }
   &__policy-text {
-    font-size: $text-size-second;
+    font-size: $text-size-first;    
     line-height: $line-height-eighth;
     letter-spacing: $letter-spacing-third;
     color: $title-text-color;
     margin-right: 5px;
-  }
+
+    @media screen and(min-width: 1200px) {
+    font-size: $text-size-second;    
+  }  
+}
   &__policy-link {
-    font-size: $text-size-second;
+    font-size: $text-size-first;
     line-height: $line-height-eighth;
     letter-spacing: $letter-spacing-third;
     color: $accent-color;
     font-family: inherit;
+
+    @media screen and(min-width: 1200px) {
+    font-size: $text-size-second; 
   }
+}
   &__submit-button {
     color: $primary-white-color;
     background-color: $accent-color;
@@ -174,7 +190,7 @@
     font-family: inherit;
     cursor: pointer;
     border-radius: $border-radius-second;
-    // padding: 10px 55px;
+    padding: 10px 55px;
     // min-width: 200px;
     text-align: center;
     border: none;
