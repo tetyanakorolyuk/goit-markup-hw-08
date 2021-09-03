@@ -8,16 +8,12 @@
    padding-top: 94px;
    padding-bottom: 94px;
  }
-}
-.benefit-section {
   &__title--hidden {
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
     margin: -1px;
-    // margin-top: 0;
-    // margin-bottom: 50px;
     color: $primary-text-color;
     font-weight: $text-weight-third;
     font-size: $text-size-seventh;
@@ -36,7 +32,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // width: 270px;
     height: 120px;
     background-color: $background-third-color;
     border-radius: $border-radius-second;

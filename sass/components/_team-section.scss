@@ -1,6 +1,7 @@
 /* Our team */
 .team-section {
   background-color: $background-third-color;
+  
   @media screen and(max-width: 1199px) {
    padding-bottom: 60px;
    padding-top: 60px;
@@ -9,9 +10,8 @@
    padding-bottom: 94px;
    padding-top: 94px;
 }
-}
-.team-section {
-  &__title {
+
+&__title {
     margin-top: 0;
     margin-bottom: 50px;
     color: $primary-text-color;
@@ -75,11 +75,10 @@
     width: 270px;    
   }
 }
+}
   .team-card {
     padding: 30px 0;
-  }
-}
-.team-card {
+  
   &__title {
     margin-top: 0;
     margin-bottom: 10px;
@@ -98,7 +97,8 @@
     line-height: $line-height-third;
     text-align: center;
   }
-}
+  }
+
 .social-box {
   display: flex;
   justify-content: center;

@@ -8,8 +8,7 @@
    padding-top: 94px;
    padding-bottom: 94px;
  }
-}
-.clients-section {
+
   &__title {
     margin-top: 0;
     margin-bottom: 30px;
@@ -36,8 +35,7 @@
    display: flex;
    align-items: center;
  }
-}
-.clients-card {
+
   &__item {
     @media screen and(max-width: 767px) { 
     width: calc((100% - 4 * 15px) / 2);

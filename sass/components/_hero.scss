@@ -43,9 +43,8 @@
     url("../images/heroimg2x.jpg");
   }
 }
-}
-.hero {
-   @media screen and(max-width: 1199px){
+
+@media screen and(max-width: 1199px){
   &__title {
     margin-top: 0;
     margin-bottom: 30px;

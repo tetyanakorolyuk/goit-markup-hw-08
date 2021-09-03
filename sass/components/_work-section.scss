@@ -1,13 +1,12 @@
 /* Our works */
- .work-section {
+.work-section {
    padding-top: 0;
    padding-bottom: 94px;
  
   @media screen and(max-width: 1199px) {
-display: none;
+  display: none;
 }
-}
-.work-section {
+
   &__title {
     margin-top: 0;
     margin-bottom: 50px;
@@ -19,6 +18,10 @@ display: none;
   }
 }
 .work-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
   &__image {
     display: block;
   }
@@ -47,11 +50,6 @@ display: none;
     text-align: center;
     color: $primary-white-color;
   }
-}
-.work-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
 
   @media screen and(min-width: 1200px) {
    display: flex;
