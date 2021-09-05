@@ -69,12 +69,15 @@
   &__link--current {
     display: block;
     letter-spacing: $letter-spacing-second;
-    font-weight: $text-weight-second;
-    font-size: $text-size-second;
+    font-weight: $text-weight-second;    
     line-height: $line-height-first;
     text-decoration: none;
     padding-top: 32px;
     padding-bottom: 32px;
+
+    @media screen and(min-width: 768px) {
+    font-size: $text-size-second;  
+    }
   }
 }
 

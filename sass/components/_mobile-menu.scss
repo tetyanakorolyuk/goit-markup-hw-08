@@ -19,7 +19,7 @@
   &:focus {
     fill: $accent-color;
   }
-
+  
   @media screen and(min-width: 768px) {
     display: none;
   }
@@ -27,9 +27,7 @@
 
 .menu-container {
   @media screen and(max-width: 767px) {
-     position: absolute;
-     display: flex;
-     flex-wrap: wrap;
+     position: absolute;     
      top: 0;
      left: 0;
      width: 100%;
@@ -38,13 +36,16 @@
      z-index: 999;
      transform: translateX(100%);
      transition: transform 250ms $cubic-bezier-color;
+     display: none;
     }
     &.is-open {
        @media screen and(max-width: 767px) {
        transform: translateX(0);
+       display: flex;
+       flex-wrap: wrap;
       }
     }
-  @media screen and(min-width: 768px) {
+   @media screen and(min-width: 768px) {
      display: none;
     }
   }
@@ -70,24 +71,12 @@
 }
 
 .mobile-menu {
-  &__link {
-    color: $primary-text-color;
-    transition: color 250ms $cubic-bezier-color;
-  }
-  @media screen and(min-width: 768px) {
-    display: none;
-  }
-
-  @media screen and(max-width: 767px) {
   margin-bottom: 302px;
 
   &__item:not(:last-child) {
   margin-bottom: 32px;
   }  
-  &__link:focus,
-  &__link:hover {
-    color: $accent-color;
-  }
+  
   &__link {
     display: block;
     font-family: inherit;
@@ -95,9 +84,14 @@
     font-weight: $text-weight-second;
     font-size: 40px;
     line-height: $line-height-second;
-    text-decoration: none;    
+    text-decoration: none;       
+    color: $primary-text-color;
+    transition: color 250ms $cubic-bezier-color;  
   }  
-}
+  &__link:focus,
+  &__link:hover {
+    color: $accent-color;
+  }
 }
 
 .mobile-list {

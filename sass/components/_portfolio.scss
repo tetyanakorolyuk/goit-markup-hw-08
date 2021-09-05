@@ -88,9 +88,12 @@
    flex-wrap: wrap;
    }
    &__link {
-    display: block;
+    display: flex;
     border: 1px solid var(--card-border-color);
     transition: box-shadow 250ms $cubic-bezier-color;
+    height: 100%;
+    flex-direction: column;
+    flex-grow: 1;
   }
   &__link:hover {
     box-shadow: 1px 4px 6px $portfolio-list-box-shadow-fisrt-color,
@@ -101,15 +104,14 @@
    margin-top: 0;
    margin-bottom: 30px;  
    cursor: pointer;
-   border: 1px solid $card-border-color;
+   border: 1px solid $card-border-color;   
 
  @media screen and(min-width: 768px) and(max-width: 1199px){
   width: calc((100% - 4 * 15px) / 2);
   margin: 15px;
   display: flex;
-  flex-direction: column;;
+  flex-direction: column;  
 }
-
   @media screen and(min-width: 1200px) {
    margin-top: 0;
    margin-bottom: 30px;
@@ -118,24 +120,35 @@
   }
  }
 
- &__item:nth-child(3n) {
-   @media screen and(min-width: 1199px){
+ &__item:nth-child(2n) {
+   @media screen and(min-width: 768px) and(max-width: 1199px) {
    margin-right: 0;
  }
 }
- &__item:nth-last-child(-n + 3) {
+&__item:nth-child(3n) {
+   @media screen and(min-width: 1200px) {
+   margin-right: 0;
+ }
+}
+&__item:last-child {
+   @media screen and(min-width: 768px) and(max-width: 1199px) {
    margin-bottom: 0;
  }
-
+ }
+ &__item:nth-last-child(-n + 3) {
+   @media screen and(min-width: 1200px) {
+   margin-bottom: 0;
+ }
+ }
   &__image-overlay {
     position: absolute;
     width: 100%;
-    height: 294px;
     bottom: 0;
     left: 0;
     background-color: $accent-color;
     transform: translateY(100%);
     transition: transform 250ms $cubic-bezier-color;
+    height: 100%;
   }
   &__text-overlay {
     font-size: $text-size-fourth;
@@ -151,12 +164,19 @@
 .portfolio-thumb {
   position: relative;  
   overflow: hidden;
+  height: 294px;
+  width: 100%;
 
-  @media screen and(min-width: 1200px) {
-   width: 370px; 
-  }
+  &__image {
+  object-fit: cover;
 }
- .portfolio-box {
+}
+.portfolio-thumb > .portfolio-thumb__image {
+  display: block;
+  height: 100%;
+  width: 100%;     
+}
+.portfolio-box {
    padding: 20px 24px;
 
   &__item-title {
