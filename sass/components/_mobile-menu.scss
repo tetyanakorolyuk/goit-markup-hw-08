@@ -77,7 +77,8 @@
   margin-bottom: 32px;
   }  
   
-  &__link {
+  &__link,
+  &__link--current {
     display: block;
     font-family: inherit;
     letter-spacing: $letter-spacing-second;
@@ -89,7 +90,8 @@
     transition: color 250ms $cubic-bezier-color;  
   }  
   &__link:focus,
-  &__link:hover {
+  &__link:hover,
+  &__link--current {
     color: $accent-color;
   }
 }

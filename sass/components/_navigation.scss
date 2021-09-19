@@ -41,11 +41,6 @@
     color: $primary-text-color;
     transition: color 250ms $cubic-bezier-color;
   }
-  &__link-email,
-  &__link-phone {
-    color: $title-text-color;
-    transition: color 250ms $cubic-bezier-color;
-  }
   &__link--current::after {
     content: "";
     position: absolute;
@@ -123,10 +118,10 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: var(--title-text-color);
-    transition: fill 250ms $cubic-bezier-color;
+    color: $title-text-color;
+    transition: color 250ms $cubic-bezier-color;
   }
-    &__icon {
+  &__icon {
     fill: currentColor;
     margin-right: 10px;
   }
